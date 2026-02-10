@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 
 public class PartitionTest {
 
+ /* Test Lomuto partition using a sorted array */
 @Test
     public void lomutoSortedArrayTest() {
         int[] arr = {10, 17, 19, 21, 44, 55, 57, 63, 65, 67};
@@ -19,7 +20,8 @@ public class PartitionTest {
             assertTrue(arr[i] > arr[pivotIndex]);
         }
     }
-
+/* Test Lomuto partition using an empty array */
+    
 @Test
     public void lomutoEmptyArrayTest() {
         int[] arr = {};
@@ -29,6 +31,7 @@ public class PartitionTest {
         assertEquals(-1, pivotIndex);
     }
 
+   /* Test Lomuto partition using an unsorted array */
     @Test
     public void lomutoUnsortedArrayTest() {
         int[] arr = {84, 3, 7, 1, 9, 6, 2, 5};
@@ -44,7 +47,7 @@ public class PartitionTest {
         }
     }
 
-    // -------- Hoare Partition Tests --------
+    // Hoare  
 
     @Test
     public void hoareSortedArrayTest() {
@@ -63,7 +66,7 @@ public class PartitionTest {
             assertTrue(arr[i] >= pivot);
         }
     }
-
+/* Test Hoare partition using an empty array */
     @Test
     public void hoareEmptyArrayTest() {
         int[] arr = {};
@@ -73,6 +76,7 @@ public class PartitionTest {
         assertEquals(-1, splitIndex);
     }
 
+    /* Test Hoare partition using a sorted array */
     @Test
     public void hoareUnsortedArrayTest() {
         int[] arr = {84, 3, 7, 1, 9, 6, 2, 5};
